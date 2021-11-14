@@ -3,10 +3,16 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+                <div class="card-header">{{ __('Elenco post') }}</div>
                 <div class="card-body">
+                    @if ($message = Session::get('success'))
+                    <div class="alert alert-success alert-block">
+                        <button type="button" class="close" data-dismiss="alert"></button>
+                        <strong>{{$message}}</strong>
+                    </div>
+                    @endif
                     <table class="table">
                         <thead>
                             <tr>
@@ -23,9 +29,14 @@
                                     <td>{{$post['title']}}</td>
                                     <td>{{$post['slug']}}</td>
                                     <td>
-                                        <a href="">
+                                        <a href="{{route("admin.posts.show",$post['id'])}}">
                                             <button type="button" class="btn btn-dark">Visualizza</button>
                                         </a>
+                                        <form action="{{route("admin.posts.destroy", $post['id'])}}" method="POST">
+                                            @csrf
+                                            @method("DELETE")
+                                            <button type="submit" class="btn btn-warning">Cancella</button>
+                                        </form>
                                     </td>
                                 </tr>  
                                 @endforeach
