@@ -1,12 +1,5 @@
 @extends('layouts.guest')
 @section('pageContent')
-
-
-
-
-
-      
-
       <article class="blog-post">
       </article>
     @foreach ($posts as $post)
@@ -18,8 +11,6 @@
         <p>{{$post['content']}}</p>
     </article> 
     @endforeach   
-
-       
 
       <nav class="blog-pagination" aria-label="Pagination">
         <a class="btn btn-outline-dark" href="#">Older</a>
