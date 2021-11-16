@@ -25,6 +25,7 @@
 
 
     <style>
+     
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -38,13 +39,16 @@
           font-size: 3.5rem;
         }
       }
+      
     </style>
 
     
     <!-- Custom styles for this template -->
     <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
     <!-- Custom styles for this template -->
+    
     <link href="https://getbootstrap.com/docs/5.1/examples/blog/blog.css" rel="stylesheet">
+   
   </head>
   <body>
     
