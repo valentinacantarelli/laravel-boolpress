@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get ('/','PageController@index');
 Route::get ('/blog','PostController@index')->name("blog.index");
 Route::get ('/blog/{slug}','PostController@show')->name("blog.show");
+
 //rotte autenticazione
 Auth::routes();
 
@@ -25,4 +26,5 @@ Route::middleware('auth')->namespace('Admin')->name('admin.')->prefix('admin')->
     Route::get('/home', 'HomeController@index')->name('home');
     Route::resource('posts','PostController');
 });
+
 

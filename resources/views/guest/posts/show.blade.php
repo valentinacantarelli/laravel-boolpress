@@ -1,10 +1,6 @@
 @extends('layouts.guest')
 @section('pageContent')
 
-
-
-
-
     <article class="blog-post">
         <article class="blog-post">
             <h1 class="blog-post-title">{{$post['title']}}</h1>
@@ -13,8 +9,6 @@
             <p>{{$post['content']}}</p>
         </article> 
     </article>
-
-     
 
     <nav class="blog-pagination" aria-label="Pagination">
       <a class="btn btn-outline-primary" href="#">Older</a>

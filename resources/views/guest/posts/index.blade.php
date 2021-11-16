@@ -5,7 +5,7 @@
     @foreach ($posts as $post)
       
     <article class="blog-post">
-        <h2 class="blog-post-title"><a href="{{route("blog.show",$post['slug'] )}}">{{$post['title']}}</a></h2>
+        <h2 class="blog-post-title"><a class="nav-link" href="{{route("blog.show",$post['slug'] )}}">{{$post['title']}}</a></h2>
         
         <p class="blog-post-meta">{{$post->created_at->diffForHumans()}} by <a href="#">Jacob</a></p>
         <p>{{$post['content']}}</p>
